@@ -108,7 +108,7 @@ size_t customHID_ :: loop(void)
 void customHID_ :: sendHIDReport(customHIDreport* report)
 {
 	// Endpoint 0x04
-	USBDevice.send(0x04, report, sizeof(customHIDreport_t));
+	USBDevice.send(pluggedEndpoint, report, sizeof(customHIDreport_t));
 }
 
 customHID_ custom_HID;
